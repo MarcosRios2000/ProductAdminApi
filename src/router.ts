@@ -59,7 +59,7 @@ router.get('/', getProducts)
 
 /**
  * @swagger
- * /api/products/:id:
+ * /api/products/{id}:
  *  get:
  *      summary: Get a product by ID
  *      tags:
@@ -139,7 +139,7 @@ router.post('/',
 
 /**
  * @swagger
- * /api/products/:id:
+ * /api/products/{id}:
  *  put:
  *      summary: Updates a product with user input
  *      tags:
@@ -200,7 +200,7 @@ router.put('/:id',
 
 /**
  * @swagger
- *  /api/products/:id:
+ *  /api/products/{id}:
  *      patch:
  *          summary: Update Product availability
  *          tags:
@@ -234,7 +234,7 @@ router.patch('/:id',
 
 /**
  * @swagger
- *  /api/products/:id:
+ *  /api/products/{id}:
  *      delete:
  *          summary: Deletes a product by a given ID
  *          tags:
