@@ -23,17 +23,15 @@ connectDB()
 // Instancia de express
 const server = express()
 
-server.use('/docs', cors(), swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
-const corsOptions: CorsOptions = {
+const corsOptions : CorsOptions= {
     origin: function(origin, cb) {
-        if (origin === process.env.FRONTEND_URL || !origin) {
-            cb(null, true);
+        if(origin === process.env.FRONTEND_URL){
+            cb(null, true)
         } else {
-            cb(new Error('Error de CORS'));
+            cb(new Error('Error de CORS'))
         }
     }
-};
+}
 server.use(cors(corsOptions))
 // Leer datos de formularios
 server.use(express.json())
